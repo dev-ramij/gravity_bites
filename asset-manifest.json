@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8e565d5a.css",
+    "main.js": "/static/js/main.d2859612.js",
+    "static/media/deli.jpg": "/static/media/deli.15c647bc2abe32dcb55d.jpg",
+    "static/media/food.jpg": "/static/media/food.75ef6680284b77fc8df2.jpg",
+    "static/media/mob3.png": "/static/media/mob3.9418ea726b34303d89d1.png",
+    "static/media/medicine.jpg": "/static/media/medicine.2bcd3222b02d62622cc1.jpg",
+    "static/media/pet.jpg": "/static/media/pet.cf06d4ac0dc132c08a80.jpg",
+    "static/media/grocery.jpg": "/static/media/grocery.d6312f0722674059fec1.jpg",
+    "static/media/mob1.png": "/static/media/mob1.9710a2f7ed55e86e1777.png",
+    "static/media/cart.jpg": "/static/media/cart.ea77122f98f6b66abf8a.jpg",
+    "static/media/happy.jpg": "/static/media/happy.60908d2adc4333d6d786.jpg",
+    "static/media/mob2.png": "/static/media/mob2.55cffab3557af6b0bf6d.png",
+    "static/media/choose.jpg": "/static/media/choose.4fe624a2f3a18964d0f3.jpg",
+    "static/media/google-play-logo.jpg": "/static/media/google-play-logo.5bfe47d9c56dccc45e0f.jpg",
+    "static/media/fish.jpg": "/static/media/fish.717c58899c740469bd1b.jpg",
+    "static/media/logo.png": "/static/media/logo.e84cd94bdea231a5933f.png",
+    "index.html": "/index.html",
+    "main.8e565d5a.css.map": "/static/css/main.8e565d5a.css.map",
+    "main.d2859612.js.map": "/static/js/main.d2859612.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e565d5a.css",
+    "static/js/main.d2859612.js"
+  ]
+}

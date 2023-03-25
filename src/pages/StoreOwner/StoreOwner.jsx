@@ -38,7 +38,7 @@ const StoreOwner = (props) => {
                                         <Form.Control className='rounded-md h-10 mb-4' type="text" placeholder="Enter Your Name" />
                                     </Form.Group>
                                     <Form.Group className="mb-2">
-                                        <Form.Label className='font-semibold'>Store Owner Email ID</Form.Label>
+                                        <Form.Label className='font-semibold'>Store Owner Email Id</Form.Label>
                                         <Form.Control className='rounded-md h-10 mb-4' type="email" placeholder="Enter Your Email ID" />
                                     </Form.Group>
                                     <Form.Group className="mb-2">

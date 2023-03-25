@@ -55,3 +55,20 @@ body{
     transform: translateY(-100%);
     transition: .4s ease-in-out;
   }
+
+.d-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}

@@ -1,12 +1,17 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Form, Button, Row, Col, Container, Table } from 'react-bootstrap';
-import { ROUTES } from '../../routes/RouterConfig'
 import Footer from '../../components/Footer'
 import Header2 from '../../components/Header2'
 
+/**
+ * 
+ * @param {{onClickNext:()=>void,onClickBack:()=>void}} props 
+ * @returns 
+ */
+const BankDetails = (props) => {
 
-const BankDetails = () => {
+    const { onClickNext, onClickBack } = props;
 
     const navigate = useNavigate()
 
@@ -16,8 +21,10 @@ const BankDetails = () => {
 
     return (
         <div className='Login'>
-            <Header2 />
-
+            <Header2
+                idx={3}
+                onClickBack={onClickBack} 
+                />
             <div className='py-16'>
                 <div className='lg:w-8/12 md:w-8/12 sm:w-8/12 w-full m-auto mt-12'>
                     <h2 className='font-semibold text-4xl my-8 text-center pb-12'>Bank details & Terms & Condition</h2>
@@ -59,11 +66,11 @@ const BankDetails = () => {
 
                             </Row>
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Terms & Conditions" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox1">
-        <Form.Check type="checkbox" label="Privacy Policy" />
-      </Form.Group>
+                                <Form.Check type="checkbox" label="Terms & Conditions" />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicCheckbox1">
+                                <Form.Check type="checkbox" label="Privacy Policy" />
+                            </Form.Group>
                         </Container>
                     </Form>
                     <h2 className='font-semibold text-2xl mt-8 text-center pb-4'>Commision & Charges per Order</h2>
@@ -114,7 +121,9 @@ const BankDetails = () => {
                         </div>
                     </Container>
                     <div className='text-center'>
-                        <Button className='bg-[#0d6efd] rounded-full w-32 mt-12' variant="primary">Submit</Button>
+                        <Button
+                            onClick={onClickNext}
+                            className='bg-[#0d6efd] rounded-full w-32 mt-12' variant="primary">Submit</Button>
                     </div>
                 </div>
             </div>

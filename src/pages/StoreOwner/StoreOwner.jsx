@@ -4,7 +4,15 @@ import { Form, Button, Row, Col, Container } from 'react-bootstrap';
 import { ROUTES } from '../../routes/RouterConfig'
 import Footer from '../../components/Footer'
 import Header2 from '../../components/Header2'
-const StoreOwner = () => {
+
+/**
+ * 
+ * @param {{onClickNext:()=>void,onClickBack:()=>void}} props 
+ * @returns 
+ */
+const StoreOwner = (props) => {
+
+    const { onClickNext, onClickBack } = props;
 
     const navigate = useNavigate()
 
@@ -14,8 +22,10 @@ const StoreOwner = () => {
 
     return (
         <div className='Login'>
-            <Header2 />
-
+            <Header2
+                idx={1}
+                onClickBack={onClickBack}
+            />
             <div className='py-16'>
                 <div className='lg:w-8/12 md:w-8/12 sm:w-8/12 w-full m-auto mt-12'>
                     <h2 className='font-semibold text-4xl my-8 text-center pb-12'>Store Owner Details</h2>
@@ -47,7 +57,9 @@ const StoreOwner = () => {
                                         </div>
                                     </Form.Group>
                                     <div className='text-center'>
-                                        <Button className='bg-[#0d6efd] rounded-full w-32 mt-12' variant="primary">Next</Button>
+                                        <Button
+                                            onClick={onClickNext}
+                                            className='bg-[#0d6efd] rounded-full w-32 mt-12' variant="primary">Next</Button>
                                     </div>
                                 </Col>
                             </Row>

@@ -7,10 +7,14 @@ import Footer from '../../components/Footer'
 import Header2 from '../../components/Header2'
 import UploadButton from '../../components/Button/UploadButton';
 
+/**
+ * 
+ * @param {{onClickNext:()=>void,onClickBack:()=>void}} props 
+ * @returns 
+ */
+const StoreDetails = (props) => {
 
-
-
-const StoreDetails = () => {
+  const { onClickNext, onClickBack } = props;
 
   const navigate = useNavigate()
 
@@ -18,12 +22,12 @@ const StoreDetails = () => {
     navigate(dir)
   }
 
-
-
-
   return (
     <div className='Login'>
-      <Header2 />
+      <Header2
+        idx={0}
+        onClickBack={onClickBack}
+      />
 
       <div className='py-16'>
         <div className='lg:w-8/12 md:w-8/12 sm:w-8/12 w-full m-auto mt-12'>
@@ -183,7 +187,9 @@ const StoreDetails = () => {
 
               </Row>
               <div className='text-center'>
-                <Button className='bg-[#0d6efd] rounded-full w-32 mt-12' variant="primary">Next</Button>
+                <Button
+                  onClick={onClickNext}
+                  className='bg-[#0d6efd] rounded-full w-32 mt-12' variant="primary">Next</Button>
               </div>
             </Container>
           </Form>

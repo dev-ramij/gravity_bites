@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Form, Button, Row, Col, Container, Table } from 'react-bootstrap';
 import Footer from '../../components/Footer'
 import Header2 from '../../components/Header2'
+import UploadButton from '../../components/Button/UploadButton';
 
 /**
  * 
@@ -41,8 +42,8 @@ const BankDetails = (props) => {
                                         <Form.Control className='rounded-md h-10 mb-8' type="number" placeholder="Enter Your Account Number" />
                                     </Form.Group>
                                     <Form.Group className="mb-3">
-                                        <Form.Label className='font-semibold'>IFSE Code</Form.Label>
-                                        <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter Bank IFSC Code" />
+                                        <Form.Label className='font-semibold'>IFSC Code</Form.Label>
+                                        <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter IFSC Code" />
                                     </Form.Group>
                                     <Form.Group className="mb-3">
                                         <Form.Label className='font-semibold'>UPI ID (Optional)</Form.Label>
@@ -52,7 +53,7 @@ const BankDetails = (props) => {
                                 <Col sm='6'>
                                     <Form.Group className="mb-3">
                                         <Form.Label className='font-semibold'>Account Holder Name</Form.Label>
-                                        <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder='Enter Account Holder Name' />
+                                        <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder='Enter Your Name' />
                                     </Form.Group>
                                     <Form.Group className="mb-3">
                                         <Form.Label className='font-semibold'>Comfirm Account Number</Form.Label>
@@ -60,7 +61,8 @@ const BankDetails = (props) => {
                                     </Form.Group>
                                     <Form.Group className="mb-3">
                                         <Form.Label className='font-semibold'>Upload (Passbook or Cancel Cheque)</Form.Label>
-                                        <Form.Control className='rounded-md h-10 mb-8' type="file" />
+                                        {/* <Form.Control className='rounded-md h-10 mb-8' type="file" /> */}
+                                        <UploadButton />
                                     </Form.Group>
                                 </Col>
 
@@ -81,39 +83,39 @@ const BankDetails = (props) => {
                                 <thead>
                                     <tr>
                                         <th>Payment</th>
-                                        <th>Revised MDR</th>
+                                        <th className="text-center">Revised MDR</th>
                                         <th>Monthly Acceptance Limit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>Food & Beverages</td>
-                                        <td>20%</td>
+                                        <td className="text-center">20%</td>
                                         <td>Unlimited</td>
                                     </tr>
                                     <tr>
                                         <td>Vegetables & Grocery</td>
-                                        <td>10%</td>
+                                        <td className="text-center">10%</td>
                                         <td>Unlimited</td>
                                     </tr>
                                     <tr>
                                         <td>Meat & Fish</td>
-                                        <td>30%</td>
+                                        <td className="text-center">30%</td>
                                         <td>Unlimited</td>
                                     </tr>
                                     <tr>
                                         <td>Medicine</td>
-                                        <td>12%</td>
+                                        <td className="text-center">12%</td>
                                         <td>Unlimited</td>
                                     </tr>
                                     <tr>
                                         <td>Pet Supplies</td>
-                                        <td>11%</td>
+                                        <td className="text-center">11%</td>
                                         <td>Unlimited</td>
                                     </tr>
                                     <tr>
                                         <td>Payment Mechanism Fee</td>
-                                        <td>15%</td>
+                                        <td className="text-center">15%</td>
                                         <td>Tax On Order Value</td>
                                     </tr>
                                 </tbody>

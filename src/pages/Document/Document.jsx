@@ -4,15 +4,8 @@ import { Form, Button, Row, Col, Container } from 'react-bootstrap';
 import { ROUTES } from '../../routes/RouterConfig'
 import Footer from '../../components/Footer'
 import Header2 from '../../components/Header2'
-
-/**
- * 
- * @param {{onClickNext:()=>void,onClickBack:()=>void}} props 
- * @returns 
- */
-const Document = (props) => {
-
-  const { onClickNext, onClickBack } = props;
+import UploadButton from '../../components/Button/UploadButton';
+const Document = () => {
 
   const navigate = useNavigate()
 
@@ -31,7 +24,7 @@ const Document = (props) => {
           <h2 className='font-semibold text-4xl my-8 text-center pb-12'>Documents</h2>
           <Form>
             <Container fluid="sm">
-              <Row>
+              <Row className="mb-5">
                 <Col sm='6'>
                   <Form.Group className="mb-3">
                     <Form.Label className='font-semibold'>Licence Type</Form.Label>
@@ -46,14 +39,6 @@ const Document = (props) => {
                     <Form.Label className='font-semibold'>Licence Number</Form.Label>
                     <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter Licence Number" />
                   </Form.Group>
-                  <Form.Group className="mb-3">
-                    <Form.Label className='font-semibold'>PAN Number</Form.Label>
-                    <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter PAN Number" />
-                  </Form.Group>
-                  <Form.Group className="mb-3">
-                    <Form.Label className='font-semibold'>GSTIN Number</Form.Label>
-                    <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter GSTIN Number" />
-                  </Form.Group>
                 </Col>
                 <Col sm='6'>
                   <Form.Group className="mb-3">
@@ -61,27 +46,76 @@ const Document = (props) => {
                     <Form.Control className='rounded-md h-10 mb-8' type="date" />
                   </Form.Group>
                   <Form.Group className="mb-3">
-                    <Form.Label className='font-semibold'>Upload Certificate</Form.Label>
-                    <Form.Control className='rounded-md h-10 mb-8' type="file" placeholder="Password" />
+                    <Form.Label className='font-semibold'>Upload FSSAI Certificate</Form.Label>
+                    <UploadButton/>
                   </Form.Group>
+
+                </Col>
+                {/* <div className='text-center'>
+                  <Button className='bg-[#0d6efd] rounded-full w-32 mt-12' variant="primary">Next</Button>
+                </div> */}
+              </Row>
+              <Row className="mb-5">
+                <Col sm='6'>
+                  <Form.Group className="mb-3">
+                    <Form.Label className='font-semibold'>Drug Licence Number</Form.Label>
+                    <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter Drug Licence Number" />
+                  </Form.Group>
+
+                </Col>
+                <Col sm='6'>
+                <Form.Group className="mb-3">
+                    <Form.Label className='font-semibold'> Expiry Date</Form.Label>
+                    <Form.Control className='rounded-md h-10 mb-8' type="date" />
+                  </Form.Group>
+                  <Form.Group className="mb-3">
+                    <Form.Label className='font-semibold'>Upload Drug Licence Certificate</Form.Label>
+                    <UploadButton/>
+                  </Form.Group>
+
+                </Col>
+              </Row>
+              <Row className="mb-5">
+                <Col sm='6'>
+                  <Form.Group className="mb-3">
+                    <Form.Label className='font-semibold'>PAN Number</Form.Label>
+                    <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter PAN Number" />
+                  </Form.Group>
+
+                </Col>
+                <Col sm='6'>
                   <Form.Group className="mb-3">
                     <Form.Label className='font-semibold'>Upload PAN Card Image</Form.Label>
-                    <Form.Control className='rounded-md h-10 mb-8' type="file" />
+                    <UploadButton/>
                   </Form.Group>
+                </Col>
+                {/* <div className='text-center'>
+                  <Button className='bg-[#0d6efd] rounded-full w-32 mt-12' variant="primary">Next</Button>
+                </div> */}
+              </Row>
+              <Row className="mb-5">
+                <Col sm='6'>
+                  <Form.Group className="mb-3">
+                    <Form.Label className='font-semibold'>GSTIN Number</Form.Label>
+                    <Form.Control className='rounded-md h-10 mb-2' type="text" placeholder="Enter GSTIN Number" />
+                    <p className='fs-15 fw-semibold'><small>*When store turnover 20 lakh above</small></p>
+                  </Form.Group>
+                </Col>
+                <Col sm='6'>
                   <Form.Group className="mb-3">
                     <Form.Label className='font-semibold'>Upload GST Certificate</Form.Label>
-                    <Form.Control className='rounded-md h-10 mb-8' type="file" />
+                    <UploadButton/>
                   </Form.Group>
 
                 </Col>
                 <div className='text-center'>
-                  <Button
-                    onClick={onClickNext}
-                    className='bg-[#0d6efd] rounded-full w-32 mt-12' variant="primary">Next</Button>
+                  <Button className='bg-[#0d6efd] rounded-full w-32 mt-12 mb-3' variant="primary">Next</Button>
                 </div>
               </Row>
             </Container>
           </Form>
+
+
 
         </div>
       </div>

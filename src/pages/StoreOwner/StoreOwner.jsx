@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Form, Button, Row, Col, Container } from 'react-bootstrap';
 import { ROUTES } from '../../routes/RouterConfig'
@@ -12,13 +12,21 @@ import Header2 from '../../components/Header2'
  */
 const StoreOwner = (props) => {
 
+    const [phone, setPhone] = useState('');
     const { onClickNext, onClickBack } = props;
+
+
 
     const navigate = useNavigate()
 
     const changeDir = (dir) => {
         navigate(dir)
     }
+
+    const handlePhoneChange = (event) => {
+        setPhone(event.target.value);
+      }
+    const isPhoneValid = phone.length === 10 && /^\d+$/.test(phone);
 
     return (
         <div className='Login'>
@@ -52,8 +60,8 @@ const StoreOwner = (props) => {
                                     <Form.Group className="mb-2">
                                         <Form.Label className='font-semibold'>Mobile Number with OTP Verification</Form.Label>
                                         <div className='flex'>
-                                            <Form.Control className='rounded-md h-10 mr-3' type="password" placeholder="Enter Your Number" />
-                                            <Button className='w-32' variant="light">Verify</Button>
+                                            <Form.Control className='rounded-md h-10 mr-3' type="password" placeholder="Enter Your Number" value={phone} onChange={handlePhoneChange} maxLength="10" />
+                                            <Button className='bg-[#1a1aff] w-32' variant="primary" disabled={!isPhoneValid} >Verify</Button>
                                         </div>
                                     </Form.Group>
                                     <div className='text-center'>

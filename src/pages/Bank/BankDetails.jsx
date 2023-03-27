@@ -62,7 +62,7 @@ const BankDetails = (props) => {
                                     <Form.Group className="mb-3">
                                         <Form.Label className='font-semibold'>Upload (Passbook or Cancel Cheque)</Form.Label>
                                         {/* <Form.Control className='rounded-md h-10 mb-8' type="file" /> */}
-                                        <UploadButton />
+                                        <UploadButton text='Upload (Passbook or Cancel Cheque)' />
                                     </Form.Group>
                                 </Col>
 

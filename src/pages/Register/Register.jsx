@@ -15,6 +15,10 @@ export default function RegisterPage() {
 
     const onClickNext = () => {
         setActivePage(p => p + 1)
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
     }
 
     const onClickBack = () => {

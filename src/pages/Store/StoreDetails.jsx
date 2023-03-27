@@ -51,7 +51,7 @@ const StoreDetails = (props) => {
               <Row>
                 <Col sm='4'>
                   <Form.Group className="mb-3">
-                    <Form.Label className='font-semibold'>Latitude</Form.Label>
+                    {/* <Form.Label className='font-semibold'>Latitude</Form.Label> */}
                     <Form.Control className='rounded-md h-10 mb-8' type="number" placeholder="Latitude" />
                   </Form.Group>
                 </Col>
@@ -61,7 +61,7 @@ const StoreDetails = (props) => {
                 <Col sm='4'>
 
                   <Form.Group className="mb-3">
-                    <Form.Label className='font-semibold'>Longitude</Form.Label>
+                    {/* <Form.Label className='font-semibold'>Longitude</Form.Label> */}
                     <Form.Control className='rounded-md h-10 mb-8' type="number" placeholder="Longitude" />
                   </Form.Group>
                 </Col>
@@ -70,7 +70,7 @@ const StoreDetails = (props) => {
               <Row>
                 <Col sm='6'>
 
-                  <Form.Group className="mb-3">
+                  <Form.Group className="mb-4">
                     <Form.Label className='font-semibold'>Store Address (Locality)</Form.Label>
                     <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter Street Number" />
                   </Form.Group>
@@ -78,11 +78,45 @@ const StoreDetails = (props) => {
                     <Form.Label className='font-semibold'>Store Address (State)</Form.Label>
                     <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter State" />
                   </Form.Group>
+
+                </Col>
+                <Col sm='6'>
+                  <Form.Group className="mb-4">
+                    <Form.Label className='font-semibold'>Store Address (City)</Form.Label>
+                    <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter City" />
+                  </Form.Group>
                   <Form.Group className="mb-3">
+                    <Form.Label className='font-semibold'>Store Address (PIN Code)</Form.Label>
+                    <Form.Control className='rounded-md h-10 ' type="text" placeholder="Enter PIN Code" />
+                    <p className='fw-semibold ml-1'><small>Enter a 6-digit pin code</small></p>
+                  </Form.Group>
+                </Col>
+
+              </Row>
+              <Row>
+                <Col sm='6'>
+                  <Form.Group className="mb-4">
                     <Form.Label className='font-semibold'>Store Address (Country Code)</Form.Label>
                     <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter Country Code" />
                   </Form.Group>
-                  <Form.Group className="mb-3">
+
+
+                </Col>
+                <Col sm='6'>
+                  <Form.Group className="mb-4">
+                    <Form.Label className='font-semibold'>Upload Store Image</Form.Label>
+                    {/* Custom button for uploading file  */}
+                    <UploadButton
+                      text='Upload Store Image'
+                    />
+                  </Form.Group>
+
+
+                </Col>
+              </Row>
+              <Row>
+                <Col sm='6'>
+                  <Form.Group className="mb-4">
                     <Form.Label className='font-semibold'>Add which category would you deliver</Form.Label>
                     <Form.Select aria-label="Select" className='rounded-md h-10 mb-8'>
                       <option>Select</option>
@@ -91,8 +125,8 @@ const StoreDetails = (props) => {
                       <option value="3">Three</option>
                     </Form.Select>
                   </Form.Group>
-                  <Form.Group className="mb-3">
-                    <Form.Label className='font-semibold'>Who Manage Store</Form.Label>
+                  <Form.Group className="mb-4">
+                    <Form.Label className='font-semibold'>Who Manage the Store ?</Form.Label>
                     <Form.Select aria-label="Name" className='rounded-md h-10 mb-8'>
                       <option>Name</option>
                       <option value="1">One</option>
@@ -100,24 +134,10 @@ const StoreDetails = (props) => {
                       <option value="3">Three</option>
                     </Form.Select>
                   </Form.Group>
+
                 </Col>
                 <Col sm='6'>
-                  <Form.Group className="mb-3">
-                    <Form.Label className='font-semibold'>Store Address (City)</Form.Label>
-                    <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter City" />
-                  </Form.Group>
-                  <Form.Group className="mb-3">
-                    <Form.Label className='font-semibold'>Store Address (PIN Code)</Form.Label>
-                    <Form.Control className='rounded-md h-10 mb-8' type="text" placeholder="Enter PIN Code" />
-                  </Form.Group>
-                  <Form.Group className="mb-3">
-                    <Form.Label className='font-semibold'>Upload Store Image</Form.Label>
-                    {/* Custom button for uploading file  */}
-                    <UploadButton
-                      text='Upload Store Image'
-                    />
-                  </Form.Group>
-                  <Form.Group className="mb-3">
+                  <Form.Group className="mb-4">
                     <Form.Label className='font-semibold'>Services</Form.Label>
                     <Form.Select aria-label="Select" className='rounded-md h-10 mb-8'>
                       <option>Select</option>
@@ -127,7 +147,6 @@ const StoreDetails = (props) => {
                     </Form.Select>
                   </Form.Group>
                 </Col>
-
               </Row>
               <Row>
                 <Col sm={6}>
@@ -145,7 +164,7 @@ const StoreDetails = (props) => {
               </Row>
               <Row>
                 <div>
-                  <h2 className='font-semibold text-xl mb-2'>Mark Open Days</h2>
+                  <h2 className='font-semibold text-xl mb-2'>Mark open days</h2>
                   <h2 className='font-medium text-sm pb-4'>Don't forget to uncheck your off-day</h2>
                 </div>
 

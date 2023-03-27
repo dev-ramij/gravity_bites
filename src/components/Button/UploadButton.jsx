@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { FaUpload } from "react-icons/fa";
 
@@ -7,7 +8,7 @@ import { FaUpload } from "react-icons/fa";
  * @returns 
  */
 export default function UploadButton(props) {
-
+    const [fileName, setFileName] = useState('');
     const { text } = props;
     const id = Math.round();
 
@@ -24,6 +25,7 @@ export default function UploadButton(props) {
     const handleFileChange = (event) => {
         try {
             const file = event.target.files[0];
+            setFileName(event.target.files[0].name);
             console.log("file: ", file)
         } catch (error) {
             console.error("Error when file change: ", error)
@@ -38,12 +40,13 @@ export default function UploadButton(props) {
                 onClick={getFile}
                 className="w-100"
             >
-                <div className="d-flex-row align-center justify-center">
+                <div className="d-flex-row align-center justify-left">
                     <FaUpload style={{ marginRight: 8 }} />
-                    {text}
+                    <p>{props.test}</p>{text}
                 </div>
 
             </Button>
+            <p className="text-info ml-1"><small>{fileName}</small></p>
             <input
                 type="file"
                 id={`file-${id}`}

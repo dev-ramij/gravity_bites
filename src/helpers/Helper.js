@@ -4,8 +4,10 @@
  * @param {string} route 
  */
 export const goToThePage = (navigate, route) => {
+    
     try {
         navigate(route)
+        
     } catch (error) {
         console.error("error in navigating page: ", error)
     }
